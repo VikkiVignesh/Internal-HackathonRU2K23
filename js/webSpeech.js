@@ -14,9 +14,9 @@ function checkSpeech(text) {
         document.getElementById('message').appendChild(p);
     }  else if (text.includes('ganga ganga') || text.includes('about ganga') || text.includes('about ganga')
         || text.includes('cleanness about ganga') || text.includes('say me about ganga river') || text.includes('ganga river')) {
-        const selectRandom = Math.floor(Math.random() * ganga.length);
-        p.innerText = ganga[selectRandom];
-        play(ganga[selectRandom]);
+        const selectRandom = Math.floor(Math.random() * g.length);
+        p.innerText = g[selectRandom];
+        play(g[selectRandom]);
         document.getElementById('message').appendChild(p);
     //    window.setTimeout(function () {
     //         window.open(gplink);
@@ -37,8 +37,11 @@ function checkSpeech(text) {
             p.innerText = sg[selectRandom];
             play(sg[selectRandom]);
             document.getElementById('message').appendChild(p);
+            window.setTimeout(function () {
+                window.open(sglink);
+            }, 3000);
 
-    } else if (text.includes('extension') || text.includes('extend') || text.includes('Assessment extension')) {
+    } else if (text.includes('') || text.includes('extend') || text.includes('Assessment extension')) {
         const selectRandom = Math.floor(Math.random() * extension.length);
         p.innerText = extension[selectRandom];
         play(extension[selectRandom]);
