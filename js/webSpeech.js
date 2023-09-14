@@ -7,52 +7,37 @@ function checkSpeech(text) {
     p = document.createElement('p');
 
     if (text.includes('hello') || text.includes('hi') || text.includes('hey')
-        || text.includes('Good morning')) 
-    
-        {
+        || text.includes('Good morning'))  {
         const selectRandom = Math.floor(Math.random() * introduction.length);
         p.innerText = introduction[selectRandom];
         play(introduction[selectRandom]);
         document.getElementById('message').appendChild(p);
-    } 
-    
-    else if (text.includes('mail') || text.includes('outlook') || text.includes('email')
-        || text.includes('email address') || text.includes('email login')) {
-        const selectRandom = Math.floor(Math.random() * email.length);
-        p.innerText = email[selectRandom];
-        play(email[selectRandom]);
+    }  else if (text.includes('ganga ganga') || text.includes('about ganga') || text.includes('about ganga')
+        || text.includes('cleanness about ganga') || text.includes('say me about ganga river') || text.includes('ganga river')) {
+        const selectRandom = Math.floor(Math.random() * ganga.length);
+        p.innerText = ganga[selectRandom];
+        play(ganga[selectRandom]);
         document.getElementById('message').appendChild(p);
+    //    window.setTimeout(function () {
+    //         window.open(gplink);
+    //     }, 3000);
+    }  else if (text.includes('polluted ganga') || text.includes('why is ganga polluted') || text.includes('')
+        || text.includes('is river ganga river polluted') || text.includes('tell me about  pollution in ganga')) {
+        const selectRandom = Math.floor(Math.random() * gp.length);
+        p.innerText = gp[selectRandom];
+        play(gp[selectRandom]);
+      //  document.getElementById('message').appendChild(p);
         window.setTimeout(function () {
-            window.open(emailLink);
+            window.open(gplink);
         }, 3000);
-    }  
-    
-    
-    else if (text.includes('AboutGanga') || text.includes('Gangas birth') || text.includes('Sacred River')
-        || text.includes('Ganga Ganga') || text.includes('tell me about ganga'))
-     {
-        const selectRandom = Math.floor(Math.random() * About_Ganga.length);
-        p.innerText = About_Ganga[selectRandom];
-        play(About_Ganga[selectRandom]);
-        document.getElementById('message').appendChild(p);
-        window.setTimeout(function () {
-            window.open(About_GangaLink);
-        }, 3000);
-    } 
-    
-    
-    else if (text.includes('grades') || text.includes('progression') || text.includes('progress')
-        || text.includes('achievement')) {
-        const selectRandom = Math.floor(Math.random() * grades.length);
-        const url = gradesLink;
-        let p2 = document.createElement('p');
-        let a = document.createElement('a');
-        a.setAttribute("href",url);
-        p2.innerText = a;
+      
+    } else if (text.includes('Save a Ganga') || text.includes('action for ganga') || text.includes('how to save ganga river')
+        || text.includes('clean Ganga')) {
+            const selectRandom = Math.floor(Math.random() * sg.length);
+            p.innerText = sg[selectRandom];
+            play(sg[selectRandom]);
+            document.getElementById('message').appendChild(p);
 
-        p.innerHTML = grades[selectRandom];
-        play(grades[selectRandom]);
-        document.getElementById('message').append(p, p2);
     } else if (text.includes('extension') || text.includes('extend') || text.includes('Assessment extension')) {
         const selectRandom = Math.floor(Math.random() * extension.length);
         p.innerText = extension[selectRandom];
