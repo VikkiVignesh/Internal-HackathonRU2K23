@@ -3,7 +3,7 @@
  *
  */
 window.onload = function(){
-    play("Hey there, how may i help you today?");
+    play("Hello , I am ChaCha Chaudhary What I Can DO For You ");
 }
 
 /**
@@ -15,7 +15,7 @@ function activateSpeech(){
 
     let speakBtn = document.getElementById('speakBtn');
     speakBtn.classList.add("btn", "speak");
-    speakBtn.innerHTML = '<img class="img-fluid" src="../Img/icons8-audio-wave.gif" width="150" height="150" alt="Speak Now">'
+    speakBtn.innerHTML = '<img class="img-fluid" src="../Img/chacha.jpg" width="150" height="150" alt="Speak Now">'
     recognition.start();
 }
 
@@ -36,7 +36,7 @@ recognition.addEventListener("end", endSpeechRecognition);
 function endSpeechRecognition() {
     let speakBtn = document.getElementById('speakBtn');
     speakBtn.classList.add("btn", "speak");
-    speakBtn.innerHTML = '<img class="img-fluid" src="../Img/chacha.jpg" style="Border-radius:50%;" width="150" height="150" alt="Speak Now">'
+    speakBtn.innerHTML = '<img class="img-fluid" src="../Img/icons8-audio-wave.gif" width="150" height="150" alt="Speak Now">'
 
     let infoMessage = document.getElementById('info');
     infoMessage.innerText = "Click on the icon to activate voice commands";
@@ -57,7 +57,7 @@ recognition.addEventListener('result', (e) =>{
     if(e.results[0].isFinal){
         let speakBtn = document.getElementById('speakBtn');
         speakBtn.classList.add("btn", "speak");
-        speakBtn.innerHTML = '<img class="img-fluid" src="../Img/chacha.png" width="150" height="150" alt="Speak Now">'
+        speakBtn.innerHTML = '<img class="img-fluid" src="../Img/microphone.png" width="150" height="150" alt="Speak Now">'
         let infoMessage = document.getElementById('info');
         infoMessage.innerText = "Click on the icon to activate voice commands";
 
